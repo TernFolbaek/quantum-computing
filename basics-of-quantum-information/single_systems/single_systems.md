@@ -94,4 +94,4 @@ H = \frac{1}{\sqrt{2}}\begin{bmatrix}
 \end{bmatrix}
 $$
 
-This gate puts a qubit from state $|0\rangle $ to the superposition state $\( \frac{|0\rangle + |1\rangle}{\sqrt{2}} \)$.
+This gate puts a qubit from state $\( |0\rangle \)$ to the superposition state $\( \frac{|0\rangle + |1\rangle}{\sqrt{2}} \)$.
