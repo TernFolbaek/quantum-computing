@@ -20,7 +20,7 @@ Here are a few illustrative examples:
 - For a six-sided die \( \mathcal{X} \), \( \Sigma = \{1, 2, 3, 4, 5, 6\} \).
 - For an electric fan switch \( \mathcal{X} \), \( \Sigma = \{\text{high, medium, low, off}\} \).
 
-When \( \mathcal{X} \) is viewed as an information carrier, the distinct classical states can embody specific meanings, leading to varied outcomes. For example, knowing with certainty that an electric fan switch is set to 'high' is a direct state identification. However, our knowledge about \( \mathcal{X} \)'s state is often probabilistic rather than deterministic. This uncertainty is expressed by assigning probabilities to each classical state, forming a probabilistic state.
+When $$\( \mathcal{X} \)$$ is viewed as an information carrier, the distinct classical states can embody specific meanings, leading to varied outcomes. For example, knowing with certainty that an electric fan switch is set to 'high' is a direct state identification. However, our knowledge about \( \mathcal{X} \)'s state is often probabilistic rather than deterministic. This uncertainty is expressed by assigning probabilities to each classical state, forming a probabilistic state.
 
 Consider \( \mathcal{X} \) as a bit. Based on prior information or expectations, we might believe there's a \( \frac{3}{4} \) chance of \( \mathcal{X} \) being in state 0 and a \( \frac{1}{4} \) chance of being in state 1. This belief can be succinctly represented as a probability vector:
 
