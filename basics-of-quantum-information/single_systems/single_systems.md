@@ -47,7 +47,7 @@ $$
 |\psi\rangle = \alpha|0\rangle + \beta|1\rangle
 $$
 
-where \( |\alpha|^2 + |\beta|^2 = 1 \).
+where $\( |\alpha|^2 + |\beta|^2 = 1 \)$.
 
 ### Measuring Quantum States
 #### When a quantum state is measured, the outcome is probabilistic and is given by the square of the amplitudes in the state vector.
