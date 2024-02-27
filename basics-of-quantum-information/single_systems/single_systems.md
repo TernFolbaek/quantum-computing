@@ -12,17 +12,17 @@ Imagine a system engineered to store information, capable of existing in a discr
 
 A quintessential example is the binary system or 'bit', characterized by two classical states: 0 and 1. Other instances include a six-sided die with states ranging from 1 to 6, a nucleobase in DNA represented by A, C, G, or T, and the settings of an electric fan, typically high, medium, low, and off. Mathematically, the definition of a system's classical states is foundational; for instance, a bit is defined by its two states, 0 and 1.
 
-Let's denote our system of interest as \( \mathcal{X} \) and its set of classical states as \( \Sigma \). It's assumed that \( \Sigma \) is both finite and non-empty, as a system devoid of states is conceptually void. Although considering systems with an infinite array of states is viable, our discussion will be confined to those with a finite state set for simplicity.
+Let's denote our system of interest as $\( \mathcal{X} \)$ and its set of classical states as $\( \Sigma \)$. It's assumed that $\( \Sigma \)$ is both finite and non-empty, as a system devoid of states is conceptually void. Although considering systems with an infinite array of states is viable, our discussion will be confined to those with a finite state set for simplicity.
 
 Here are a few illustrative examples:
 
-- For a bit \( \mathcal{X} \), \( \Sigma = \{0, 1\} \), often referred to as the binary alphabet.
-- For a six-sided die \( \mathcal{X} \), \( \Sigma = \{1, 2, 3, 4, 5, 6\} \).
-- For an electric fan switch \( \mathcal{X} \), \( \Sigma = \{\text{high, medium, low, off}\} \).
+- For a bit $\( \mathcal{X} \), \( \Sigma = \{0, 1\} \)$, often referred to as the binary alphabet.
+- For a six-sided die $\( \mathcal{X} \), \( \Sigma = \{1, 2, 3, 4, 5, 6\} \)$.
+- For an electric fan switch $\( \mathcal{X} \), \( \Sigma = \{\text{high, medium, low, off}\} \)$.
 
-When $$\( \mathcal{X} \)$$ is viewed as an information carrier, the distinct classical states can embody specific meanings, leading to varied outcomes. For example, knowing with certainty that an electric fan switch is set to 'high' is a direct state identification. However, our knowledge about \( \mathcal{X} \)'s state is often probabilistic rather than deterministic. This uncertainty is expressed by assigning probabilities to each classical state, forming a probabilistic state.
+When $\( \mathcal{X} \)$ is viewed as an information carrier, the distinct classical states can embody specific meanings, leading to varied outcomes. For example, knowing with certainty that an electric fan switch is set to 'high' is a direct state identification. However, our knowledge about $\( \mathcal{X} \)$'s state is often probabilistic rather than deterministic. This uncertainty is expressed by assigning probabilities to each classical state, forming a probabilistic state.
 
-Consider \( \mathcal{X} \) as a bit. Based on prior information or expectations, we might believe there's a \( \frac{3}{4} \) chance of \( \mathcal{X} \) being in state 0 and a \( \frac{1}{4} \) chance of being in state 1. This belief can be succinctly represented as a probability vector:
+Consider $\( \mathcal{X} \)$ as a bit. Based on prior information or expectations, we might believe there's a $\( \frac{3}{4} \)$ chance of $\( \mathcal{X} \)$ being in state 0 and a $\( \frac{1}{4} \)$ chance of being in state 1. This belief can be succinctly represented as a probability vector:
 
 $$
 \begin{pmatrix}
@@ -31,7 +31,7 @@ $$
 \end{pmatrix}
 $$
 
-In this vector, the top entry signifies the probability of \( \mathcal{X} \) being in state 0, and the bottom entry the probability of state 1, adhering to conventional ordering.
+In this vector, the top entry signifies the probability of $\( \mathcal{X} \)$ being in state 0, and the bottom entry the probability of state 1, adhering to conventional ordering.
 
 In general, the probabilistic state of any system with a defined set of classical states can be depicted similarly, as a vector of probabilities. The ordering of these probabilities is usually determined by the natural or default ordering of the classical states in question. To qualify as a probability vector, a column vector must satisfy two criteria:
 
