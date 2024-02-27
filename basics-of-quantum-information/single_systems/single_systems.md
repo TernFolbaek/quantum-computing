@@ -53,7 +53,32 @@ where $\( |\alpha|^2 + |\beta|^2 = 1 \)$.
 
 Example:
 
-For the state $\( |\psi\rangle \)$ defined above, the probability of measuring the state $\( |0\rangle \)$ is $\( |\alpha|^2 \)$, and the probability of measuring the state $\( |1\rangle \)$ is $\( |\beta|^2 \)$.
+For the state $\( |\psi\rangle \)# Quantum Information
+
+Quantum information deals with the study and manipulation of quantum systems to encode and process information in ways that classical systems cannot. The fundamental unit of quantum information is the qubit.
+
+## Classical States and Probability Vectors
+
+In classical information theory, the state of a system can be described by a probability vector. For example, the state of a bit can be either 0 or 1, with probabilities $p$ and $1-p$, respectively.
+
+## Quantum State Vectors
+
+Unlike classical bits, qubits can exist in a superposition of states. A quantum state $|\psi\rangle$ can be represented as a linear combination of basis states:
+
+$$
+|\psi\rangle = \alpha|0\rangle + \beta|1\rangle
+$$
+
+Here, $|\alpha|^2$ and $|\beta|^2$ represent the probability of measuring the qubit in the $|0\rangle$ or $|1\rangle$ state, respectively, and they must sum up to 1:
+
+$$
+|\alpha|^2 + |\beta|^2 = 1
+$$
+
+## Measuring Quantum States
+
+Measuring a quantum state collapses the superposition to one of the basis states. The outcome is probabilistic, governed by the amplitudes $\alpha$ and $\beta$.
+$ defined above, the probability of measuring the state $\( |0\rangle \)$ is $\( |\alpha|^2 \)$, and the probability of measuring the state $\( |1\rangle \)$ is $\( |\beta|^2 \)$.
 
 ## Unitary Operations
 ### Unitary operations are reversible transformations on quantum state vectors that preserve the inner product (and hence the probabilities).
@@ -69,4 +94,4 @@ H = \frac{1}{\sqrt{2}}\begin{bmatrix}
 \end{bmatrix}
 $$
 
-This gate puts a qubit from state $\( |0\rangle \)$ to the superposition state $\( \frac{|0\rangle + |1\rangle}{\sqrt{2}} \)$.
+This gate puts a qubit from state $|0\rangle $ to the superposition state $\( \frac{|0\rangle + |1\rangle}{\sqrt{2}} \)$.
