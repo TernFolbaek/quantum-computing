@@ -1,50 +1,46 @@
-# Single Systems in Quantum Information
+# Classical Information
 
-The explanation of single systems within quantum information can be facilitated by our understanding of classical information to begin with. Therefore, the first section will focus on our understanding of systems within the classical "realm."
+To describe quantum information and how it works, we will begin with an overview of classical information. Despite the focus on quantum information, understanding classical information is crucial due to their mathematical similarities and the foundational role classical concepts play in understanding quantum phenomena.
 
-## Classical Information
+Classical information serves as a familiar point of reference and a source of analogy for quantum information. It's often the case that questions about quantum information find their analogs in classical contexts, providing clarity and insight.
 
-### Classical States and Probability Vectors
+Understanding classical information is essential for grasping the nuances of quantum information. This section not only highlights key aspects of classical information relevant to quantum studies but also introduces the Dirac notation, a versatile tool used across various domains, including quantum information, to describe vectors and matrices.
 
-Suppose that we have a system that stores information. More specifically, let's assume that this system can be in one of a finite number of classical states at each instant. Here, the term "classical state" should be understood in intuitive terms, as a configuration that can be recognized and described unambiguously.
+## Classical States and Probability Vectors
 
-The archetypal example, which we will come back to repeatedly, is that of a bit, which is a system whose classical states are `0` and `1`. Other examples include:
+Imagine a system designed to store information, capable of existing in one of several distinct classical states at any given moment. A "classical state" refers to a clearly identifiable and describable configuration of the system.
 
-- A standard six-sided die, whose classical states are `1`, `2`, `3`, `4`, `5`, and `6`.
-- A nucleobase in a strand of DNA, whose classical states are `A`, `C`, `G`, and `T`.
-- A switch on an electric fan, whose classical states are (commonly) `high`, `medium`, `low`, and `off`.
+### Examples
 
-In mathematical terms, we define a system and its classical states as follows:
+- **Bit**: The fundamental example with two classical states, `0` and `1`.
+- **Six-sided Die**: With classical states numbered `1` through `6`.
+- **Nucleobase in DNA**: With classical states `A`, `C`, `G`, and `T`.
+- **Electric Fan Switch**: Commonly having states such as `high`, `medium`, `low`, and `off`.
 
-- Let \( \Sigma \) be the set of classical states of a system \( X \).
-- We assume \( \Sigma \) is finite and nonempty.
+In mathematical terms, we define these systems based on their classical states. For instance, a bit is defined by its two possible states, `0` and `1`.
 
-#### Examples:
+Let's denote our system of interest as `X` and the set of its classical states as `Σ`. We assume `Σ` is finite and nonempty, focusing on systems with a limited number of states for simplicity.
 
-- If \( X \) is a bit, then \( \Sigma = \{0, 1\} \).
-- If \( X \) is a six-sided die, then \( \Sigma = \{1, 2, 3, 4, 5, 6\} \).
-- If \( X \) is an electric fan switch, then \( \Sigma = \{\text{high}, \text{medium}, \text{low}, \text{off}\} \).
+### Representing Uncertainty with Probability Vectors
 
-When thinking about \( X \) as a carrier of information, the different classical states of \( X \) could be assigned certain meanings, leading to different outcomes or consequences.
+Often, our knowledge about the system's exact state is uncertain. We express this uncertainty by assigning probabilities to each possible state, forming a probabilistic state representation.
 
-### Representing Uncertainty
+For example, for a bit `X`, we might believe:
 
-Often in information processing, our knowledge of \( X \) is uncertain. We represent our knowledge of the classical state of \( X \) by assigning probabilities to each classical state, resulting in a probabilistic state. 
+- `Pr(X = 0) = 3/4`
+- `Pr(X = 1) = 1/4`
 
-For example, suppose \( X \) is a bit. We might believe:
+This probabilistic state can be neatly represented as a column vector using LaTeX in a Markdown document:
 
-- \( Pr(X = 0) = \frac{3}{4} \)
-- \( Pr(X = 1) = \frac{1}{4} \)
+```latex
+\begin{pmatrix}
+3/4 \\
+1/4 \\
+\end{pmatrix}
+```
+Here, the probability of X being in state 0 is listed first, followed by the probability of it being in state 1, adhering to the conventional ordering.
 
-This can be succinctly represented by a column vector:
-
-\[ \begin{pmatrix} \frac{3}{4} \\ \frac{1}{4} \end{pmatrix} \]
-
-Where the probability of the bit being `0` is at the top, and the probability of it being `1` is at the bottom.
-
-#### Properties of Probability Vectors:
-
-1. All entries are nonnegative real numbers.
-2. The sum of the entries equals `1`.
-
-This format allows for operations on probabilistic states to be represented through matrix–vector multiplication, facilitating calculations and analysis.
+Properties of Probability Vectors
+All vector entries are nonnegative real numbers.
+The sum of the entries equals 1.
+This approach of using column vectors not only provides a succinct notation but also facilitates the use of matrix-vector multiplication to represent operations on probabilistic states, which we will explore further.
