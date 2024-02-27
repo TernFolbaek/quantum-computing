@@ -20,7 +20,7 @@ Example:
 
 If we measure the above system, we expect to find it in state 0 with a probability of 0.5 and in state 1 with a probability of 0.5.
 
-### ####Classical Operations
+### Classical Operations
 #### Classical operations on bits include logical operations such as AND, OR, and XOR.
 
 Example:
