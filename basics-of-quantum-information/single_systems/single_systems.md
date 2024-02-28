@@ -92,7 +92,75 @@ This probabilistic nature contrasts with quantum systems, where a qubit can exis
 
 
 ### Operations on Classical States
+#### Deterministic operations
 
+First, there are deterministic operations, where each classical state \( a \in \Sigma \) is transformed into \( f(a) \) for some function \( f \) of the form \( f: \Sigma \rightarrow \Sigma \).
+
+For example, if \( \Sigma = \{0, 1\} \), there are four functions of this form, \( f_1, f_2, f_3 \), and \( f_4 \), which can be represented by tables of values as follows:
+
+\[
+\begin{array}{cc}
+a & f_1(a) \\
+\hline
+0 & 0 \\
+1 & 0 \\
+\end{array}
+\quad
+\begin{array}{cc}
+a & f_2(a) \\
+\hline
+0 & 0 \\
+1 & 1 \\
+\end{array}
+\quad
+\begin{array}{cc}
+a & f_3(a) \\
+\hline
+0 & 1 \\
+1 & 0 \\
+\end{array}
+\quad
+\begin{array}{cc}
+a & f_4(a) \\
+\hline
+0 & 1 \\
+1 & 1 \\
+\end{array}
+\]
+
+The first and last of these functions are _constant_: \( f_1(a) = 0 \) and \( f_4(a) = 1 \) for each \( a \in \Sigma \). The middle two are not constant, they are _balanced_, in the sense that the two possible output values occur the same number of times as we range over the possible inputs. The function \( f_2 \) is the identity function: \( f_2(a) = a \) for each \( a \in \Sigma \). And \( f_3 \) is the function \( f_3(0) = 1 \) and \( f_3(1) = 0 \), which is better-known as the NOT function.
+
+The actions of deterministic operations on probabilistic states can be represented by matrix-vector multiplication. Specifically, the matrix \( \mathbf{M} \) that represents a given function \( f: \Sigma \rightarrow \Sigma \) is the one that satisfies
+
+\[
+\mathbf{M} |a\rangle = |f(a)\rangle
+\]
+
+for every \( a \in \Sigma \). Such a matrix always exists and is unique.
+
+For example, the matrices \( \mathbf{M}_1, \mathbf{M}_2, \mathbf{M}_3 \), and \( \mathbf{M}_4 \) corresponding to the functions \( f_1, \ldots, f_4 \) above are as follows:
+
+\[
+\mathbf{M}_1 = \begin{bmatrix}
+1 & 0 \\
+0 & 0 \\
+\end{bmatrix}, \quad
+\mathbf{M}_2 = \begin{bmatrix}
+1 & 0 \\
+0 & 1 \\
+\end{bmatrix}, \quad
+\mathbf{M}_3 = \begin{bmatrix}
+0 & 1 \\
+1 & 0 \\
+\end{bmatrix}, \quad
+\mathbf{M}_4 = \begin{bmatrix}
+0 & 0 \\
+1 & 1 \\
+\end{bmatrix}.
+\]
+
+
+#### Probabilistic Operations
 Operations on classical states can be represented by matrices that transform one probability vector into another. These matrices must have non-negative entries and each column must sum up to one to preserve the total probability.
 
 An example of an operation is a stochastic matrix that represents a noisy channel, which can alter the state of the bit with certain probabilities.
