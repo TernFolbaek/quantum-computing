@@ -78,7 +78,7 @@ $$
 ## Measuring Quantum States
 
 Measuring a quantum state collapses the superposition to one of the basis states. The outcome is probabilistic, governed by the amplitudes $\alpha$ and $\beta$.
-defined above, the probability of measuring the state $|0\rangle $ is $|\alpha|^2 $, and the probability of measuring the state $|1\rangle $ is $ |\beta|^2 $.
+defined above, the probability of measuring the state $|0\rangle$ is $|\alpha|^2$, and the probability of measuring the state $|1\rangle$ is $|\beta|^2$.
 
 ## Unitary Operations
 ### Unitary operations are reversible transformations on quantum state vectors that preserve the inner product (and hence the probabilities).
@@ -94,4 +94,4 @@ H = \frac{1}{\sqrt{2}}\begin{bmatrix}
 \end{bmatrix}
 $$
 
-This gate puts a qubit from state $\|0\rangle$ to the superposition state $ \frac{|0\rangle + |1\rangle}{\sqrt{2}} $.
+This gate puts a qubit from state $\|0\rangle$ to the superposition state $\frac{|0\rangle + |1\rangle}{\sqrt{2}}$.
