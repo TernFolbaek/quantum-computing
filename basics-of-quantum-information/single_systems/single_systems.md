@@ -46,7 +46,7 @@ $$
 |\psi\rangle = \alpha|0\rangle + \beta|1\rangle
 $$
 
-where $ |\alpha|^2 + |\beta|^2 = 1 $.
+where $|\alpha|^2$ + $|\beta|^2 = 1 $.
 
 ## Measuring Quantum States
 ### When a quantum state is measured, the outcome is probabilistic and is given by the square of the amplitudes in the state vector.
@@ -78,7 +78,7 @@ $$
 ## Measuring Quantum States
 
 Measuring a quantum state collapses the superposition to one of the basis states. The outcome is probabilistic, governed by the amplitudes $\alpha$ and $\beta$.
-$ defined above, the probability of measuring the state $\( |0\rangle \)$ is $\( |\alpha|^2 \)$, and the probability of measuring the state $\( |1\rangle \)$ is $\( |\beta|^2 \)$.
+defined above, the probability of measuring the state $|0\rangle $ is $|\alpha|^2 $, and the probability of measuring the state $|1\rangle $ is $ |\beta|^2 $.
 
 ## Unitary Operations
 ### Unitary operations are reversible transformations on quantum state vectors that preserve the inner product (and hence the probabilities).
