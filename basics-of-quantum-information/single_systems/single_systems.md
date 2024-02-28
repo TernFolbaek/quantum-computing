@@ -1,41 +1,136 @@
-## Classical Information
-### Classical States and Probability Vectors
-In classical information theory, a system's state can be described deterministically. However, when dealing with systems that have uncertain outcomes, we use probability vectors to represent the state of the system.
+# Information in Single Systems
 
-Example:
+#### Below will focus on the manipulation and information extraction which are done on single Systems. A system can be denoted various notations, however in this notebook we will be focusing on the system of bits and qubits, respective to the classical and quantum states. 
+A system could for example be a bit X. This bit can be in two possible states, {0,1}, which is called the classical state set. Therefore the hierarchy is as follows: System, Set, State. A system which is in a state given its state set.
 
-A classical bit can be in state 0 or state 1. The probability vector for a system that is equally likely to be in state 0 or state 1 is given by:
+In this current notebook and the notebooks to follow will utilize the dirac-notation to describe our state vectors, both in the classical and quantum sense. The Dirac Notation utilizes the bra-ket, which are respective vector notations to a row vector and a column vector. Bra denoting a row vector, and ket denoting a column vector. These vectors will look as follows:
 
 $$
-p = \begin{bmatrix}
-0.5 \\
-0.5
+|\psi\rangle = \alpha|0\rangle + \beta|1\rangle =  \begin{bmatrix}
+\alpha \\
+\beta
 \end{bmatrix}
 $$
 
+
+$$
+\langle\psi| = \langle0|\alpha + \langle1|\beta =\begin{bmatrix} \alpha & \beta \end{bmatrix}
+$$
+
+## Classical Information
+
+### Classical States and Probability Vectors
+
+In classical information theory, we often describe the state of a system in terms of probabilities. This is especially true for stochastic processes where the outcome is not deterministic. 
+
+A probability vector contains non-negative entries that sum up to one and each entry in the vector represents the probability of the system being in a particular state. The length of the probability vector is equal to the number of possible states of the system.
+
+For example, for a binary system (a bit) that can be in state 0 or state 1, the probability vector is a two-dimensional vector where each component represents the probability of the system being in state 0 or state 1, respectively.
+
+The general form of a probability vector for a binary system is given by:
+
+$$
+p = \begin{bmatrix}
+p_0 \\
+p_1
+\end{bmatrix}
+$$
+
+where \( p_0 + p_1 = 1 \).
+
+The probabilities \( p_0 \) and \( p_1 \) correspond to the likelihood of the system being in state 0 and state 1, respectively.
+
+### Example of a Biased Coin
+
+Consider a biased coin that has a 70% chance of landing heads (state 0) and a 30% chance of landing tails (state 1). The probability vector for this coin is:
+
+$$
+p = \begin{bmatrix}
+0.7 \\
+0.3
+\end{bmatrix}
+$$
+
+
 ## Measuring Probabilistic States
-### The process of measuring a probabilistic state involves determining the state of a system based on the probability distribution.
 
+When dealing with the measurement of probabilistic states in classical systems, we can represent the uncertainty of a system's state with a probability distribution vector. This vector quantifies the likelihood of the system being found in each of its possible states upon measurement.
 
-If we measure the above system, we expect to find it in state 0 with a probability of 0.5 and in state 1 with a probability of 0.5.
-
-## Classical Operations
-### Classical operations on bits include logical operations such as AND, OR, and XOR.
-
-Example:
-
-The AND operation can be represented as follows:
+For example, consider a classical system that can be in one of three possible states: \(\{0, 1, 2\}\). Let's define a probability vector \( \mathbf{p} \) for this system as:
 
 $$
-\text{AND}(0, 1) = 0
+\mathbf{p} = \begin{bmatrix}
+p_0 \\
+p_1 \\
+p_2
+\end{bmatrix}
 $$
 
+where \( p_0, p_1, \) and \( p_2 \) represent the probabilities of the system being in states 0, 1, and 2, respectively.
+
+Suppose the system is twice as likely to be in state 0 than in state 1, and the probability of being in state 2 is the same as in state 1. If we normalize this probability vector such that the sum of probabilities equals 1 (as required by the axioms of probability), we obtain:
+
 $$
-\text{AND}(1, 1) = 1
+\mathbf{p} = \begin{bmatrix}
+\frac{2}{4} \\
+\frac{1}{4} \\
+\frac{1}{4}
+\end{bmatrix} = \begin{bmatrix}
+0.5 \\
+0.25 \\
+0.25
+\end{bmatrix}
 $$
+
+The measurement process then involves observing the system's state according to this distribution. For instance, if we perform a measurement, the expected outcomes would be:
+
+- The system is found in state 0 with a probability of \( p_0 = 0.5 \).
+- The system is found in state 1 with a probability of \( p_1 = 0.25 \).
+- The system is found in state 2 with a probability of \( p_2 = 0.25 \).
+
+This probabilistic nature contrasts with quantum systems, where a qubit can exist in a superposition of states and the probabilities are derived from the square of the amplitudes of the state vector. Upon measurement, a quantum state collapses to one of the basis states, which is analogous to a classical bit being observed as either 0 or 1. However, the quantum measurement is governed by different principles, such as the Born rule, which uses the squared magnitude of the amplitudes to determine probabilities.
+
+
+### Operations on Classical States
+
+Operations on classical states can be represented by matrices that transform one probability vector into another. These matrices must have non-negative entries and each column must sum up to one to preserve the total probability.
+
+An example of an operation is a stochastic matrix that represents a noisy channel, which can alter the state of the bit with certain probabilities.
+
+For instance, a bit flip channel that flips the state of the bit with a probability of 10% can be represented by the following matrix:
+
+$$
+M = \begin{bmatrix}
+0.9 & 0.1 \\
+0.1 & 0.9
+\end{bmatrix}
+$$
+
+This matrix tells us that if our system is in state 0, there is a 90% chance it will stay in state 0 after passing through the channel and a 10% chance it will flip to state 1. The same probabilities apply to state 1.
+
+If our system's initial state is given by the probability vector \( p \), the state after passing through the channel is given by:
+
+$$
+p' = M p = \begin{bmatrix}
+0.9 & 0.1 \\
+0.1 & 0.9
+\end{bmatrix}
+\begin{bmatrix}
+p_0 \\
+p_1
+\end{bmatrix}
+= \begin{bmatrix}
+0.9p_0 + 0.1p_1 \\
+0.1p_0 + 0.9p_1
+\end{bmatrix}
+$$
+
+The new probability vector \( p' \) reflects the altered state probabilities due to the noisy channel.
 
 ## Quantum Information
+
 ### Quantum State Vectors
+
 In quantum mechanics, the state of a quantum system is described by a quantum state vector. This vector is a complex vector in a Hilbert space and contains amplitudes that represent the probability of finding the system in a particular state upon measurement.
 
 Example:
@@ -46,46 +141,49 @@ $$
 |\psi\rangle = \alpha|0\rangle + \beta|1\rangle
 $$
 
-where $|\alpha|^2$ + $|\beta|^2 = 1 $.
+where \(|\alpha|^2 + |\beta|^2 = 1\).
 
-## Measuring Quantum States
-### When a quantum state is measured, the outcome is probabilistic and is given by the square of the amplitudes in the state vector.
+These coefficients \( \alpha \) and \( \beta \) are complex numbers and can be represented as \( \alpha = a + bi \) and \( \beta = c + di \), where \( a, b, c, d \) are real numbers and \( i \) is the imaginary unit. The modulus squared of these coefficients, \( |\alpha|^2 \) and \( |\beta|^2 \), give the probability of the qubit being measured in the corresponding state.
 
-Example:
+### Measuring Quantum States
 
-For the state $\( |\psi\rangle \)# Quantum Information
+When a quantum state is measured, the outcome is probabilistic and is given by the square of the amplitudes in the state vector.
 
-Quantum information deals with the study and manipulation of quantum systems to encode and process information in ways that classical systems cannot. The fundamental unit of quantum information is the qubit.
-
-## Classical States and Probability Vectors
-
-In classical information theory, the state of a system can be described by a probability vector. For example, the state of a bit can be either 0 or 1, with probabilities $p$ and $1-p$, respectively.
-
-## Quantum State Vectors
-
-Unlike classical bits, qubits can exist in a superposition of states. A quantum state $|\psi\rangle$ can be represented as a linear combination of basis states:
+Let's explore another example, the state \( |\psi\rangle \) given by a general superposition of the basis states \( |0\rangle \) and \( |1\rangle \):
 
 $$
-|\psi\rangle = \alpha|0\rangle + \beta|1\rangle
+|\psi\rangle = \frac{1}{\sqrt{3}}|0\rangle + \sqrt{\frac{2}{3}}|1\rangle
 $$
 
-Here, $|\alpha|^2$ and $|\beta|^2$ represent the probability of measuring the qubit in the $|0\rangle$ or $|1\rangle$ state, respectively, and they must sum up to 1:
+Here, the probabilities of measuring the state in \( |0\rangle \) or \( |1\rangle \) are:
 
 $$
-|\alpha|^2 + |\beta|^2 = 1
+\text{Pr(outcome is } 0) = \left|\left\langle 0 | \psi \right\rangle\right|^2 = \left|\frac{1}{\sqrt{3}}\right|^2 = \frac{1}{3}
 $$
 
-## Measuring Quantum States
+$$
+\text{Pr(outcome is } 1) = \left|\left\langle 1 | \psi \right\rangle\right|^2 = \left|\sqrt{\frac{2}{3}}\right|^2 = \frac{2}{3}
+$$
 
-Measuring a quantum state collapses the superposition to one of the basis states. The outcome is probabilistic, governed by the amplitudes $\alpha$ and $\beta$.
-defined above, the probability of measuring the state $|0\rangle$ is $|\alpha|^2$, and the probability of measuring the state $|1\rangle$ is $|\beta|^2$.
+This example illustrates that the qubit is more likely to be found in state \( |1\rangle \) upon measurement.
 
-## Unitary Operations
-### Unitary operations are reversible transformations on quantum state vectors that preserve the inner product (and hence the probabilities).
+### Bloch Sphere Representation
 
-Example:
+The state of a single qubit can also be represented on the Bloch sphere. Every point on the surface of this sphere corresponds to a possible state of the qubit.
 
-A common unitary operation is the Hadamard gate, represented as:
+A qubit state on the Bloch sphere is given by:
+
+$$
+|\psi\rangle = \cos\left(\frac{\theta}{2}\right)|0\rangle + e^{i\phi}\sin\left(\frac{\theta}{2}\right)|1\rangle
+$$
+
+where \( \theta \) and \( \phi \) are the polar and azimuthal angles, respectively.
+
+### Quantum Gates and Operations
+
+Quantum gates are the basic unitary operations that change the state of a single qubit. The most commonly used quantum gate is the Hadamard gate, which creates a superposition of states.
+
+The Hadamard gate is represented as:
 
 $$
 H = \frac{1}{\sqrt{2}}\begin{bmatrix}
@@ -94,4 +192,7 @@ H = \frac{1}{\sqrt{2}}\begin{bmatrix}
 \end{bmatrix}
 $$
 
-This gate puts a qubit from state $\|0\rangle$ to the superposition state $\frac{|0\rangle + |1\rangle}{\sqrt{2}}$.
+When applied to the state \( |0\rangle \), it yields the superposition state \( \frac{|0\rangle + |1\rangle}{\sqrt{2}} \), which corresponds to the \( |+\rangle \) state on the Bloch sphere.
+
+
+
