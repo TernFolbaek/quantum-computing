@@ -46,7 +46,7 @@ $$
 |\psi\rangle = \alpha|0\rangle + \beta|1\rangle
 $$
 
-where $\( |\alpha|^2 + |\beta|^2 = 1 \)$.
+where $ |\alpha|^2 + |\beta|^2 = 1 $.
 
 ## Measuring Quantum States
 ### When a quantum state is measured, the outcome is probabilistic and is given by the square of the amplitudes in the state vector.
@@ -94,4 +94,4 @@ H = \frac{1}{\sqrt{2}}\begin{bmatrix}
 \end{bmatrix}
 $$
 
-This gate puts a qubit from state $\|0\rangle$ to the superposition state $( \frac{|0\rangle + |1\rangle}{\sqrt{2}} )$.
+This gate puts a qubit from state $\|0\rangle$ to the superposition state $ \frac{|0\rangle + |1\rangle}{\sqrt{2}} $.
