@@ -38,7 +38,7 @@ $$
 
 where $p_0 + p_1 = 1$.
 
-The probabilities $\( p_0 \) and \( p_1 \)$ correspond to the likelihood of the system being in state 0 and state 1, respectively.
+The probabilities $p_0$ and $p_1$ correspond to the likelihood of the system being in state 0 and state 1, respectively.
 
 ### Example of a Biased Coin
 
@@ -98,7 +98,7 @@ First, there are deterministic operations, where each classical state \( a \in \
 
 For example, if \( \Sigma = \{0, 1\} \), there are four functions of this form, \( f_1, f_2, f_3 \), and \( f_4 \), which can be represented by tables of values as follows:
 
-\[
+$$
 \begin{array}{cc}
 a & f_1(a) \\
 \hline
@@ -126,7 +126,7 @@ a & f_4(a) \\
 0 & 1 \\
 1 & 1 \\
 \end{array}
-\]
+$$
 
 The first and last of these functions are _constant_: \( f_1(a) = 0 \) and \( f_4(a) = 1 \) for each \( a \in \Sigma \). The middle two are not constant, they are _balanced_, in the sense that the two possible output values occur the same number of times as we range over the possible inputs. The function \( f_2 \) is the identity function: \( f_2(a) = a \) for each \( a \in \Sigma \). And \( f_3 \) is the function \( f_3(0) = 1 \) and \( f_3(1) = 0 \), which is better-known as the NOT function.
 
