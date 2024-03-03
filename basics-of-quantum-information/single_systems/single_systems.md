@@ -209,7 +209,7 @@ $$
 |\psi\rangle = \alpha|0\rangle + \beta|1\rangle
 $$
 
-where$|\alpha|^2 + |\beta|^2 = $.
+where $|\alpha|^2 + |\beta|^2 = 1$.
 
 These coefficients $\alpha$ and $\beta$ are complex numbers and can be represented as $\alpha = a + bi$ and $\beta = c + di$, where $a, b, c, d$ are real numbers and $i$ is the imaginary unit. The modulus squared of these coefficients, $|\alpha|^2$ and $|\beta|^2$, give the probability of the qubit being measured in the corresponding state.
 
