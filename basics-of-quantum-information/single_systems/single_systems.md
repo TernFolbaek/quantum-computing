@@ -36,9 +36,9 @@ p_1
 \end{bmatrix}
 $$
 
-where \( p_0 + p_1 = 1 \).
+where $\( p_0 + p_1 = 1 \)$.
 
-The probabilities \( p_0 \) and \( p_1 \) correspond to the likelihood of the system being in state 0 and state 1, respectively.
+The probabilities $\( p_0 \) and \( p_1 \)$ correspond to the likelihood of the system being in state 0 and state 1, respectively.
 
 ### Example of a Biased Coin
 
