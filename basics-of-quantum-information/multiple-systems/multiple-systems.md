@@ -323,11 +323,13 @@ Each Bell state cannot be written as a product of two separate state vectors, in
 Examples of multi-qubit entangled states include the GHZ and W states for three qubits:
 
 The GHZ state:
+
 $$
 \frac{1}{\sqrt{2}}(|000\rangle + |111\rangle)
 $$
 
 The W state:
+
 $$
 \frac{1}{\sqrt{3}}(|001\rangle + |010\rangle + |100\rangle)
 $$
