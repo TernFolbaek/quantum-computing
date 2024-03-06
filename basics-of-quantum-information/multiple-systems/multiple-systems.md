@@ -437,7 +437,7 @@ $$
 
 Controlled operations are a type of unitary operation where the action on one subsystem depends on the state of another. The controlled NOT (CNOT) operation is a common example used in quantum computing.
 
-## #Swap Operation
+### Swap Operation
 
 The swap operation exchanges the state of two systems. For systems with state set $\Sigma$, the operation for states $a, b \in \Sigma$ is:
 
